@@ -1,0 +1,57 @@
+{
+    "name": "@tailcove/react-native",
+    "version": "0.1.0",
+    "description": "React Native client for Tailcove: logs and JavaScript errors from iOS and Android apps, batched, retried and kept across restarts.",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/tailcove/react-native.git"
+    },
+    "homepage": "https://tailcove.dev/docs/sending-logs/react-native",
+    "type": "module",
+    "keywords": [
+        "logging",
+        "tailcove",
+        "react-native",
+        "expo",
+        "mobile",
+        "error-tracking",
+        "crash-reporting"
+    ],
+    "files": [
+        "dist"
+    ],
+    "main": "./dist/index.cjs",
+    "module": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "react-native": "./dist/index.js",
+    "exports": {
+        ".": {
+            "import": {
+                "types": "./dist/index.d.ts",
+                "default": "./dist/index.js"
+            },
+            "require": {
+                "types": "./dist/index.d.cts",
+                "default": "./dist/index.cjs"
+            }
+        }
+    },
+    "scripts": {
+        "build": "tsup",
+        "test": "vitest run",
+        "test:watch": "vitest",
+        "typecheck": "tsc --noEmit"
+    },
+    "peerDependencies": {
+        "react-native": ">=0.70"
+    },
+    "devDependencies": {
+        "tsup": "^8.3.5",
+        "typescript": "^5.7.2",
+        "vitest": "^3.0.0"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
+}

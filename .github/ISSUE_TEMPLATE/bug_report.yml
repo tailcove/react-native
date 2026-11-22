@@ -1,0 +1,59 @@
+name: Bug report
+description: Something in @tailcove/react-native isn't working as expected.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report this. The more detail you give, the faster we can fix it.
+
+        **Never paste your app key.** Replace it with `***`.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Tell us what you saw, and what you expected to see instead.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: How can we reproduce it?
+      description: The smallest code or steps that show the problem.
+      render: ts
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: "@tailcove/react-native version"
+      placeholder: "0.1.0"
+    validations:
+      required: true
+  - type: input
+    id: runtime
+    attributes:
+      label: React Native version, platform (iOS/Android) and Expo or bare
+      placeholder: "React Native 0.76, Android 14, Expo 52"
+    validations:
+      required: true
+  - type: input
+    id: framework
+    attributes:
+      label: JavaScript engine (optional)
+      placeholder: "Hermes"
+  - type: textarea
+    id: logs
+    attributes:
+      label: Errors or output
+      description: Any error message, stack trace or console output. This is formatted as code automatically.
+      render: shell
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues and didn't find a duplicate.
+          required: true
+        - label: I removed any tokens, keys and private data from this report.
+          required: true

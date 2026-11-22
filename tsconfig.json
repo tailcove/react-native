@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "target": "ES2022",
+        "lib": ["ES2022", "DOM"],
+        "module": "ESNext",
+        "moduleResolution": "bundler",
+        "strict": true,
+        "noImplicitAny": true,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "isolatedModules": true,
+        "skipLibCheck": true,
+        "declaration": true,
+        "noEmit": true,
+        "baseUrl": ".",
+        "paths": {
+            "react-native": ["./test/react-native-stub.ts"]
+        }
+    },
+    "include": ["src", "test"]
+}
